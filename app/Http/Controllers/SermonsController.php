@@ -18,7 +18,7 @@ class SermonsController extends Controller
         	$sermon->title = $row->title;
         	$sermon->youtubeId = $row->youtubeID;
         	$sermon->description = $row->description;
-            $sermon->image = $row->image;
+            $sermon->image = $row->posterImage;
             $sermon->views = $row->views;
 
         	$sermon->save();
