@@ -19,3 +19,6 @@ Route::get('/success', function () {
 });
 Route::get('/getxml', 'SermonsController@store');
 Route::get('/api/sermons/list', 'SermonsController@json');
+Route::get('/list', function() {
+	return view('elevation.show');
+});

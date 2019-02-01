@@ -36,6 +36,7 @@
         <a class="nav-link active" href="/">Home</a>
         <a class="nav-link" href="/getxml">Import Xml</a>
         <a class="nav-link" href="/api/sermons/list">JSON</a>
+        <a class="nav-link" href="/list">Semon List</a>
       </nav>
     </div>
   </header>
