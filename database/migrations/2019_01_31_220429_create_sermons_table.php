@@ -17,6 +17,8 @@ class CreateSermonsTable extends Migration
             $table->increments('id');
             $table->string('youtubeId');
             $table->text('title');
+            $table->text('image');
+            $table->integer('views');
             $table->longText('description');
         });
     }

@@ -18,6 +18,8 @@ class SermonsController extends Controller
         	$sermon->title = $row->title;
         	$sermon->youtubeId = $row->youtubeID;
         	$sermon->description = $row->description;
+            $sermon->image = $row->image;
+            $sermon->views = $row->views;
 
         	$sermon->save();
         }
@@ -31,4 +33,14 @@ class SermonsController extends Controller
 
         return $sermons;
     }
+
+    public function show()
+    {
+        $url = 'http://142.93.1.82/api/sermons/list';
+
+        $json = file_get_contents($url);
+        $obj = json_decode($json);
+        
+        return view('elevation.show', compact('obj'));
+    }   
 }

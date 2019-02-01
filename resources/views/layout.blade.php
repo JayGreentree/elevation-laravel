@@ -23,9 +23,13 @@
           font-size: 3.5rem;
         }
       }
+
+    </style>
     </style>
     <!-- Custom styles for this template -->
     <link rel="stylesheet" type="text/css" href="{{ url('/css/style.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ url('/css/list.css') }}" />
+
   </head>
   <body class="text-center">
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
