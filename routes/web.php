@@ -11,12 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('elevation.index');
-});
-Route::get('/success', function () {
-    return view('elevation.success');
-});
-Route::get('/getxml', 'SermonsController@store');
-Route::get('/api/sermons/list', 'SermonsController@json');
-Route::get('/list', 'SermonsController@show');
+Route::get('/', 'ElevationsController@index');
+
+Route::get('/list', 'SermonsController@index');
+Route::get('/api/sermons/list', 'SermonsController@show');
+
+Route::get('/getxml', 'XmlsControllers@index');
+Route::post('/getxml', 'XmlsControllers@store');
+Route::get('/getxml/success', 'XmlsControllers@show');

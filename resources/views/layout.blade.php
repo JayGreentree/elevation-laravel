@@ -4,8 +4,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Jekyll v3.8.5">
     <title>@yield('title')</title>
 
     <!-- Bootstrap core CSS -->
@@ -27,26 +25,28 @@
     </style>
     </style>
     <!-- Custom styles for this template -->
-    <link rel="stylesheet" type="text/css" href="{{ url('/css/style.css') }}" />
-    <link rel="stylesheet" type="text/css" href="{{ url('/css/list.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ url('/css/style.css?v=1') }}" />
 
   </head>
   <body class="text-center">
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
   <header class="masthead mb-auto">
     <div class="inner">
-      <h3 class="masthead-brand">Elevation</h3>
+      <a href="/">
+      <img class="masthead-brand" href="/" src="{{ url('/img/elevation.jpg') }}" height="30%" width="32%">
+      </a>
+<!--       <h3 class="masthead-brand" >Elevation</h3> -->
       <nav class="nav nav-masthead justify-content-center">
-        <a class="nav-link active" href="/">Home</a>
-        <a class="nav-link" href="/getxml">Import Xml</a>
+        <a class="nav-link @if($title == 'Elevation Project') active @endif" href="/">Home</a>
+        <a class="nav-link @if($title == 'Success') active @endif" href="/getxml">Import Xml</a>
         <a class="nav-link" href="/api/sermons/list">JSON</a>
-        <a class="nav-link" href="/list">Semon List</a>
+        <a class="nav-link @if($title == 'Sermons') active @endif" href="/list">Semons</a>
       </nav>
     </div>
   </header>
 
   <main role="main" class="inner cover">
-    @yield('content')
+      @yield('content')
   </main>
 
   <footer class="mastfoot mt-auto">
