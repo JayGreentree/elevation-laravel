@@ -15,7 +15,7 @@ class SermonsController extends Controller
         $obj = json_decode($json, true);
 
         $page = ! isset($_GET['page']) ? 1 : $_GET['page'];
-        $limit = 14;
+        $limit = 18;
         $offset = ($page - 1) * $limit;
         $totalItems = count($obj);
         $totalPages = ceil($totalItems / $limit);
