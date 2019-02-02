@@ -40,7 +40,7 @@
         <a class="nav-link @if($title == 'Elevation Project') active @endif" href="/">Home</a>
         <a class="nav-link @if($title == 'Success') active @endif" href="/getxml">Import Xml</a>
         <a class="nav-link" href="/api/sermons/list">JSON</a>
-        <a class="nav-link @if($title == 'Sermons') active @endif" href="/list">Semons</a>
+        <a class="nav-link @if($title == 'Sermons') active @endif" href="/list">Sermons</a>
       </nav>
     </div>
   </header>
